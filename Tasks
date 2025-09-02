@@ -1,0 +1,12 @@
+-- Création de la base (si ce n’est pas déjà fait)
+CREATE DATABASE taskmanager;
+
+-- Connexion à la base
+\c taskmanager;
+
+-- Création de la table tasks
+CREATE TABLE tasks (
+    id SERIAL PRIMARY KEY,
+    title TEXT NOT NULL,
+    completed BOOLEAN DEFAULT FALSE
+);
